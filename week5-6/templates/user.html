@@ -1,0 +1,12 @@
+<h1>Userr DASHBOARD</h1>
+<p>Welcome, {{request.user.username }}</p>
+
+<ul>
+    <li>View Profile</li>
+    <li>Access Personal Data</li>
+</ul>
+
+<form action="{% url 'logout' %}" method="post">
+    {% csrf.token %}
+    <button type="submit">Logout</button>
+</form>

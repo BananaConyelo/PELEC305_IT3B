@@ -1,0 +1,12 @@
+<h1>Staff DASHBOARD</h1>
+<p>Welcome, {{request.user.username }}</p>
+
+<ul>
+    <li>Update Records</li>
+    <li>View Limited Reports</li>
+</ul>
+
+<form action="{% url 'logout' %}" method="post">
+    {% csrf.token %}
+    <button type="submit">Logout</button>
+</form>

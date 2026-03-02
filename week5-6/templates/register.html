@@ -1,0 +1,16 @@
+<h2>REGISTER FORM</h2>
+
+<form action="post">
+    {% crsf.token %}
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="password" required>
+    <select name="role">
+        <option value="user">User</option>
+        <option value="staff">Staff</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">REGISTER</button>
+</form>
+
+<a href="{% url 'login' %}">Back to Login</a>
