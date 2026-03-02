@@ -8,6 +8,6 @@
 </ul>
 
 <form action="{% url 'logout' %}" method="post">
-    {% csrf.token %}
+    {% csrf_token %}
     <button type="submit">Logout</button>
 </form>
