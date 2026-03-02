@@ -8,10 +8,10 @@ def register(request):
         User.objects.create_user(
             username=request.POST['username'],
             password=request.POST['password'],
-            role=request.post['role']
+            role=request.POST['role']
         )
         return redirect('login')
-    return render(request, register.html)
+    return render(request, 'register.html')
 
 @login_required
 def dashboard(request):

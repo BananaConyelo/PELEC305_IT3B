@@ -1,6 +1,6 @@
 <h2>REGISTER FORM</h2>
 
-<form action="post">
+<form method="POST">
     {% csrf_token %}
     <input type="text" name="username" placeholder="Username" required>
     <input type="password" name="password" placeholder="password" required>
